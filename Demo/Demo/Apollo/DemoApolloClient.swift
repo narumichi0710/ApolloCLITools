@@ -16,12 +16,10 @@ public struct DemoApolloClient {
         let cache = InMemoryNormalizedCache()
         let store = ApolloStore(cache: cache)
         let provider = NetworkInterceptorProvider(store: store, client: client)
-        let url = URL(string: "https://swapi-graphql.netlify.app/.netlify/functions/index/graphql")!
+        let url = URL(string: "https://swapi-graphql.netlify.app/.netlify/functions/index")!
         let transport = RequestChainNetworkTransport(
             interceptorProvider: provider,
-            endpointURL: url,
-            useGETForQueries: true,
-            useGETForPersistedQueryRetry: true
+            endpointURL: url
         )
         return ApolloClient(networkTransport: transport, store: store)
     }()
