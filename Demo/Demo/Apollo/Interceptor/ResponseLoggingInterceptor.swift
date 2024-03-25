@@ -28,7 +28,7 @@ class ResponseLoggingInterceptor: ApolloInterceptor {
         }
         guard let response, let data = String(bytes: response.rawData, encoding: .utf8) else {
             chain.handleErrorAsync(
-                ApolloError.fetal,
+                ApolloError.fatal,
                 request: request,
                 response: response,
                 completion: completion

@@ -28,5 +28,5 @@ public struct DemoApolloClient {
 }
 
 enum ApolloError: Error {
-    case fetal
+    case fatal
 }

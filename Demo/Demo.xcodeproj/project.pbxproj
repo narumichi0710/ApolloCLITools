@@ -13,11 +13,16 @@
 		38E600192BB1B1C800144F07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E600182BB1B1C800144F07 /* Preview Assets.xcassets */; };
 		38E600292BB1B5DA00144F07 /* Generated in Resources */ = {isa = PBXBuildFile; fileRef = 38E600282BB1B5DA00144F07 /* Generated */; };
 		38E6002F2BB1B91700144F07 /* Operation in Resources */ = {isa = PBXBuildFile; fileRef = 38E6002E2BB1B91700144F07 /* Operation */; };
+		38E600322BB1BCE700144F07 /* RequestLoggingInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E600312BB1BCE700144F07 /* RequestLoggingInterceptor.swift */; };
+		38E600342BB1BD0D00144F07 /* ResponseLoggingInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E600332BB1BD0D00144F07 /* ResponseLoggingInterceptor.swift */; };
+		38E600372BB1BD8D00144F07 /* NetworkInterceptorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E600362BB1BD8D00144F07 /* NetworkInterceptorProvider.swift */; };
+		38E600392BB1BDA600144F07 /* DemoApolloClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E600382BB1BDA600144F07 /* DemoApolloClient.swift */; };
 		38E6003C2BB1BE2B00144F07 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 38E6003B2BB1BE2B00144F07 /* Apollo */; };
 		38E6003E2BB1BE2B00144F07 /* Apollo-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 38E6003D2BB1BE2B00144F07 /* Apollo-Dynamic */; };
 		38E600402BB1BE2B00144F07 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 38E6003F2BB1BE2B00144F07 /* ApolloAPI */; };
 		38E600422BB1BE2B00144F07 /* ApolloSQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 38E600412BB1BE2B00144F07 /* ApolloSQLite */; };
 		38E600442BB1BE2B00144F07 /* ApolloTestSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 38E600432BB1BE2B00144F07 /* ApolloTestSupport */; };
+		38E600472BB1BF6D00144F07 /* ApolloClient+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E600462BB1BF6D00144F07 /* ApolloClient+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,11 @@
 		38E6001F2BB1B1D300144F07 /* ApolloCLITools */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ApolloCLITools; path = ..; sourceTree = "<group>"; };
 		38E600282BB1B5DA00144F07 /* Generated */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Generated; sourceTree = "<group>"; };
 		38E6002E2BB1B91700144F07 /* Operation */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Operation; path = Demo/Operation; sourceTree = SOURCE_ROOT; };
+		38E600312BB1BCE700144F07 /* RequestLoggingInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLoggingInterceptor.swift; sourceTree = "<group>"; };
+		38E600332BB1BD0D00144F07 /* ResponseLoggingInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseLoggingInterceptor.swift; sourceTree = "<group>"; };
+		38E600362BB1BD8D00144F07 /* NetworkInterceptorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterceptorProvider.swift; sourceTree = "<group>"; };
+		38E600382BB1BDA600144F07 /* DemoApolloClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoApolloClient.swift; sourceTree = "<group>"; };
+		38E600462BB1BF6D00144F07 /* ApolloClient+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApolloClient+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +98,38 @@
 		38E600272BB1B5BA00144F07 /* Apollo */ = {
 			isa = PBXGroup;
 			children = (
+				38E600452BB1BF5D00144F07 /* Extension */,
+				38E600352BB1BD7C00144F07 /* Provider */,
+				38E600302BB1BCD300144F07 /* Interceptor */,
 				38E600282BB1B5DA00144F07 /* Generated */,
+				38E600382BB1BDA600144F07 /* DemoApolloClient.swift */,
 			);
 			path = Apollo;
+			sourceTree = "<group>";
+		};
+		38E600302BB1BCD300144F07 /* Interceptor */ = {
+			isa = PBXGroup;
+			children = (
+				38E600312BB1BCE700144F07 /* RequestLoggingInterceptor.swift */,
+				38E600332BB1BD0D00144F07 /* ResponseLoggingInterceptor.swift */,
+			);
+			path = Interceptor;
+			sourceTree = "<group>";
+		};
+		38E600352BB1BD7C00144F07 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				38E600362BB1BD8D00144F07 /* NetworkInterceptorProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		38E600452BB1BF5D00144F07 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				38E600462BB1BF6D00144F07 /* ApolloClient+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,7 +214,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E600372BB1BD8D00144F07 /* NetworkInterceptorProvider.swift in Sources */,
+				38E600392BB1BDA600144F07 /* DemoApolloClient.swift in Sources */,
+				38E600472BB1BF6D00144F07 /* ApolloClient+.swift in Sources */,
 				38E600142BB1B1C700144F07 /* MainView.swift in Sources */,
+				38E600342BB1BD0D00144F07 /* ResponseLoggingInterceptor.swift in Sources */,
+				38E600322BB1BCE700144F07 /* RequestLoggingInterceptor.swift in Sources */,
 				38E600122BB1B1C700144F07 /* DemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
