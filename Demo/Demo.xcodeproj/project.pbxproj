@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		38E600122BB1B1C700144F07 /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E600112BB1B1C700144F07 /* DemoApp.swift */; };
-		38E600142BB1B1C700144F07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E600132BB1B1C700144F07 /* ContentView.swift */; };
+		38E600142BB1B1C700144F07 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E600132BB1B1C700144F07 /* MainView.swift */; };
 		38E600162BB1B1C800144F07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E600152BB1B1C800144F07 /* Assets.xcassets */; };
 		38E600192BB1B1C800144F07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E600182BB1B1C800144F07 /* Preview Assets.xcassets */; };
 		38E600292BB1B5DA00144F07 /* Generated in Resources */ = {isa = PBXBuildFile; fileRef = 38E600282BB1B5DA00144F07 /* Generated */; };
+		38E6002F2BB1B91700144F07 /* Operation in Resources */ = {isa = PBXBuildFile; fileRef = 38E6002E2BB1B91700144F07 /* Operation */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		38E6000E2BB1B1C700144F07 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E600112BB1B1C700144F07 /* DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoApp.swift; sourceTree = "<group>"; };
-		38E600132BB1B1C700144F07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		38E600132BB1B1C700144F07 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		38E600152BB1B1C800144F07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38E600182BB1B1C800144F07 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		38E6001F2BB1B1D300144F07 /* ApolloCLITools */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ApolloCLITools; path = ..; sourceTree = "<group>"; };
 		38E600282BB1B5DA00144F07 /* Generated */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Generated; sourceTree = "<group>"; };
+		38E6002E2BB1B91700144F07 /* Operation */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Operation; path = Demo/Operation; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +57,10 @@
 		38E600102BB1B1C700144F07 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				38E6002E2BB1B91700144F07 /* Operation */,
 				38E600272BB1B5BA00144F07 /* Apollo */,
+				38E600132BB1B1C700144F07 /* MainView.swift */,
 				38E600112BB1B1C700144F07 /* DemoApp.swift */,
-				38E600132BB1B1C700144F07 /* ContentView.swift */,
 				38E600152BB1B1C800144F07 /* Assets.xcassets */,
 				38E600172BB1B1C800144F07 /* Preview Content */,
 			);
@@ -140,6 +143,7 @@
 			files = (
 				38E600192BB1B1C800144F07 /* Preview Assets.xcassets in Resources */,
 				38E600162BB1B1C800144F07 /* Assets.xcassets in Resources */,
+				38E6002F2BB1B91700144F07 /* Operation in Resources */,
 				38E600292BB1B5DA00144F07 /* Generated in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,7 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38E600142BB1B1C700144F07 /* ContentView.swift in Sources */,
+				38E600142BB1B1C700144F07 /* MainView.swift in Sources */,
 				38E600122BB1B1C700144F07 /* DemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,14 @@
+query GetAllFilms {
+  allFilms {
+    ...FilmListFragment
+  }
+}
+
+fragment FilmListFragment on FilmsConnection {
+  films {
+    title
+    director
+    releaseDate
+    episodeID
+  }
+}
