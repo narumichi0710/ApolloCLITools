@@ -20,7 +20,7 @@ struct DownloadSchema: AsyncParsableCommand {
     mutating func run() async throws {
         #if os(macOS)
             let endpointUrl = URL(string: "https://swapi-graphql.netlify.app/.netlify/functions/index/graphql")!
-            let outputPath = "./schema.graphqls"
+            let outputPath = "./Demo/Demo/Apollo/Generated/Schema/schema.graphqls"
             let configuration = ApolloSchemaDownloadConfiguration(
                 using: .introspection(endpointURL: endpointUrl, outputFormat: .SDL),
                 outputPath: outputPath
