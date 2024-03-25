@@ -34,9 +34,9 @@ struct GenerateCode: AsyncParsableCommand {
                 output: .init(
                     schemaTypes: ApolloCodegenConfiguration.SchemaTypesFileOutput(
                         path: schemaConfigPath,
-                        moduleType: .embeddedInTarget(name: "Demo", accessModifier: .internal)
+                        moduleType: .embeddedInTarget(name: "Demo", accessModifier: .public)
                     ),
-                    operations: .relative(subpath: relativePath, accessModifier: .internal),
+                    operations: .relative(subpath: relativePath, accessModifier: .public),
                     testMocks: .none
                 )
             )
