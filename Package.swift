@@ -3,21 +3,29 @@
 
 import PackageDescription
 
+
 let package = Package(
     name: "ApolloCLITools",
+    platforms: [.macOS(.v12)],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "ApolloCLITools",
-            targets: ["ApolloCLITools"]),
+        .executable(name: "DownloadSchema", targets: ["DownloadSchema"]),
+        .executable(name: "GenerateCode", targets: ["GenerateCode"])
+    ],
+    dependencies: [
+        .package(url: "https://github.com/apollographql/apollo-ios.git", exact: "1.9.1"),
+        .package(url: "https://github.com/apollographql/apollo-ios-codegen.git", exact: "1.9.1"),
+        .package(url: "https://github.com/apple/swift-argument-parser", exact: "1.3.1")
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "ApolloCLITools"),
-        .testTarget(
-            name: "ApolloCLIToolsTests",
-            dependencies: ["ApolloCLITools"]),
+        .executableTarget(name: "DownloadSchema", dependencies: [
+            .product(name: "Apollo", package: "apollo-ios"),
+            .product(name: "ApolloCodegenLib", package: "apollo-ios-codegen"),
+            .product(name: "ArgumentParser", package: "swift-argument-parser")
+        ]),
+        .executableTarget(name: "GenerateCode", dependencies: [
+            .product(name: "Apollo", package: "apollo-ios"),
+            .product(name: "ApolloCodegenLib", package: "apollo-ios-codegen"),
+            .product(name: "ArgumentParser", package: "swift-argument-parser")
+        ])
     ]
 )
